@@ -22,7 +22,7 @@ Antes de iniciar, tenha instalado:
    ```
 2. Entre na pasta do projeto:
    ```sh
-   cd nome-do-repositorio
+   cd RecuperaTAX
    ```
 3. Instale as dependências:
    ```sh
