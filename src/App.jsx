@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './routes/PrivateRoute';
 
@@ -21,6 +21,7 @@ function App() {
               <Route path="/register" element={<PrivateRoute><CompanyRegister /></PrivateRoute>} />
               <Route path="/companies" element={<PrivateRoute><CompanyList /></PrivateRoute>} />
               <Route path="/spreadsheets" element={<PrivateRoute><SpreadsheetList /></PrivateRoute>} />
+              <Route path="*" element={ <Navigate to='/' /> } />
             </Routes>
           </div>
         </div>
