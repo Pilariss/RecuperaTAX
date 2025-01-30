@@ -10,6 +10,10 @@ Bem-vindo ao **RecuperaTAX**, um sistema para cadastro e gerenciamento de empres
 
 ## 📦 Como Rodar o Projeto
 
+### Credenciais de acesso
+- **Login:** admin@example.com
+- **Senha:** 123456
+
 ### 🔧 1. Pré-requisitos
 Antes de iniciar, tenha instalado:
 - **Node.js** (versão 16+ recomendada)
