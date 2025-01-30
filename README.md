@@ -70,4 +70,4 @@ teste-pratico-react/
 ├── package.json       (Dependências do projeto)
 ├── README.md          (Instruções para rodar o projeto)
 
-Feito com ❤️ por [Larissa Pires] (https://github.com/Pilariss)
+Feito com ❤️ por [Larissa Pires]
