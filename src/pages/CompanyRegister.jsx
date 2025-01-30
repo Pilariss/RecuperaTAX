@@ -81,7 +81,20 @@ function CompanyRegister() {
             <input id="zipCode" type="text" name="zipCode" value={form.zipCode} onChange={handleChange} required />
           </div>
         </div>
-
+        <div className="form-section">
+          <div className="form-group">
+            <label htmlFor="road">Rua</label>
+            <input id="road" type="text" name="road" value={form.road} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="number">Número</label>
+            <input id="number" type="text" name="number" value={form.number} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="district">Bairro</label>
+            <input id="district" type="text" name="district" value={form.district} onChange={handleChange} required />
+          </div>
+        </div>
         <div className="form-section">
           <div className="form-group">
             <label htmlFor="country">País</label>
@@ -96,26 +109,10 @@ function CompanyRegister() {
             <input id="city" type="text" name="city" value={form.city} onChange={handleChange} required />
           </div>
           <div className="form-group">
-            <label htmlFor="district">Bairro</label>
-            <input id="district" type="text" name="district" value={form.district} onChange={handleChange} required />
-          </div>
-        </div>
-
-        <div className="form-section">
-          <div className="form-group">
-            <label htmlFor="road">Rua</label>
-            <input id="road" type="text" name="road" value={form.road} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="number">Número</label>
-            <input id="number" type="text" name="number" value={form.number} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
             <label htmlFor="complement">Complemento</label>
             <input id="complement" type="text" name="complement" value={form.complement} onChange={handleChange} />
           </div>
         </div>
-
         <button type="submit">Salvar</button>
       </form>
     </div>
