@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const formatCNPJ = (value) => {
-  const cleaned = value.replace(/\D/g, ""); // Remove tudo que não for número
+  const cleaned = value.replace(/\D/g, "");
 
   return cleaned
     .slice(0, 14)
@@ -12,7 +12,8 @@ const formatCNPJ = (value) => {
 };
 
 const validarCNPJ = (_cnpj) => {
-  const cnpj = _cnpj.replace(/\D/g, ""); // Remove caracteres não numéricos
+  const cnpj = _cnpj.replace(/\D/g, ""); 
+
 
   if (cnpj.length !== 14 || /^(\d)\1{13}$/.test(cnpj)) return false;
 
@@ -79,8 +80,8 @@ const CNPJInput = ({ onChange, ...props }) => {
       {isValid === false && (
         <p style={{ color: "red", fontSize: 8 }}>CNPJ inválido</p>
       )}
-    </>
-  );
+   </>
+  );
 };
 
 export default CNPJInput

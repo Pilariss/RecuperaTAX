@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { getCompanies } from '../services/companyService';
+import { readDocuments } from '../services/crud';
 import '../styles/companyList.css';
 
 function CompanyList() {
   const [companies, setCompanies] = useState([]);
 
   useEffect(() => {
-    setCompanies(getCompanies());
+    const fetchCompanies = async () => {
+      try {
+        const data = await readDocuments("empresas");
+        console.log(data);
+        setCompanies(data);
+      } catch (error) {
+        console.error("Erro ao buscar empresas: ", error);
+      }
+    }
+
+    fetchCompanies();
   }, []);
 
   return (

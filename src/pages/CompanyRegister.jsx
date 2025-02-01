@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createCompany } from '../services/companyService';
+import { createDocument } from '../services/crud';
 import '../styles/companyRegister.css';
 import CNPJInput from '../components/CNPJInput';
 
@@ -25,10 +25,10 @@ function CompanyRegister() {
     setForm({ ...form, [name]: name === 'number' ? value.replace(/\D/g, '') : value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    createCompany(form);
+    await createDocument('empresas', form);
     alert(`Empresa ${form.name} cadastrada com sucesso!`);
 
     setForm({

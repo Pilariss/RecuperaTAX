@@ -1,6 +1,6 @@
-# 📌 RecuperaTAX - Sistema de Cadastro de Empresas
+# 📌 Sistema de Cadastro de Empresas
 
-Bem-vindo ao **RecuperaTAX**, um sistema para cadastro e gerenciamento de empresas. Aqui você pode registrar informações como CNPJ, contato, endereço e mais.
+Bem-vindo ao **Sistema de cadastro de Empresas**, um sistema para cadastro e gerenciamento de empresas. Aqui você pode registrar informações como CNPJ, contato, endereço e mais.
 
 ## 🚀 Tecnologias Utilizadas
 
