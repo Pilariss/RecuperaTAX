@@ -12,7 +12,7 @@
 }
 
 .login h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .login form {
@@ -21,8 +21,6 @@
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
-  display: flex;
-  flex-direction: column;
 }
 
 .login input {
@@ -33,18 +31,41 @@
   font-size: 16px;
 }
 
-.login button {
+.login-buttons {
+  display: flex;
+  justify-content: space-between; 
+  gap: 15px; 
+  width: 100%; 
+  margin-top: 10px; 
+}
+
+.login-buttons button {
   background: #2c3e50;
-  color: white;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  font-size: 18px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  align-self: flex-end;
+  color: white;
+}
+
+.google-logo {
+  width: 22px;
+  height: 21px;
 }
 
 .login button:hover {
   background: #34495e;
+}
+
+.google-button:hover {
+  background-color: #f1f1f1;
 }
 
 p {

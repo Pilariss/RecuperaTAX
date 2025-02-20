@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-// import GoogleIcon from "../assets/icon/Google__G__logo.svg";
 import "../styles/register.css";
 
 function Register() {
@@ -33,29 +32,13 @@ function Register() {
     }
   }; 
 
-  // const handleGoogleLogin = async () => {
-  //   const success = await loginWithGoogle();
-  //   if (success) {
-  //     console.log("Usuário cadastrado, realize o seu primeiro acesso!");
-  //     navigate("/");
-  //   } else {
-  //     setError("Erro ao autenticar com o Google.");
-  //   }
-  // };
-
   return (
     <div className="register">
       <h1>Cadastro</h1>
       <form className="register-form" onSubmit={handleRegister}>
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
         <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required/>
-        <div className="register-buttons">
-          {/* <button onClick={handleGoogleLogin}>
-            <img src={GoogleIcon} alt="Gooogle Logo" className="google-logo"/>
-            <span className="google-text">Google</span>
-          </button> */}
-          <button type="submit">Cadastrar</button>
-        </div>
+        <button className="register-button" type="submit">Cadastrar</button>
       </form>
       {error && <p className="error">{error}</p>}
       <p>

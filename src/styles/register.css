@@ -17,37 +17,23 @@
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
-.register-buttons {
-  display: flex;
-  justify-content: space-between; 
-  gap: 15px; 
-  width: 100%; 
-  margin-top: 10px; 
-}
-
-.register-buttons button {
-  background: #2c3e50;
-  display: flex;
-  align-items: center;
+.register-button {
   justify-content: center;
-  gap: 8px;
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  font-size: 18px;
-  padding: 10px;
+  background: #2c3e50;
+  color: white;
+  padding: 12px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  align-self: flex-end;
-  color: white;
+  font-size: 16px;
 }
 
-.google-logo {
-  width: 22px;
-  height: 22px;
+.register-button:hover {
+  background: #34495e;
 }
 
 .register h1 {
@@ -60,14 +46,6 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-}
-
-.register button:hover {
-  background: #34495e;
-}
-
-.google-button:hover {
-  background-color: #f1f1f1;
 }
 
 .error {
