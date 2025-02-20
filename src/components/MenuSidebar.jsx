@@ -25,8 +25,8 @@ function MenuSidebar() {
       <ul>
         {user && (
           <>
-            <li><Link to="/register">Cadastrar Empresa</Link></li>
-            <li><Link to="/companies">Listar Empresas</Link></li>
+            <li><Link to="/companyregister">Cadastrar Empresa</Link></li>
+            <li><Link to="/companieslist">Listar Empresas</Link></li>
             <li><Link to="/spreadsheets">Listar Planilhas</Link></li>
             <li><button className="logout-button" onClick={handleLogout}>Sair</button></li>
           </>

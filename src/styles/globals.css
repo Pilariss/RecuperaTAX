@@ -16,6 +16,7 @@ body {
 }
 
 .content {
+  justify-content: center;
   padding: 60px;
   width: 100%;
 }

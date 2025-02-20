@@ -46,3 +46,7 @@
 .login button:hover {
   background: #34495e;
 }
+
+p {
+  margin-top: 10px;
+}

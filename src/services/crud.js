@@ -60,11 +60,3 @@ export const deleteDocument = async (collectionName, documentId) => {
     throw error;
   }
 };
-// export const createDocument = async(...params) => {
-//     console.log(params)
-// }
-
-// export const readDocuments = async(...params) => {
-//     console.log(params)
-//     return []
-// }
