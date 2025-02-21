@@ -18,7 +18,7 @@ function Register() {
       setError("A senha deve ter pelo menos 6 caracteres.");
       return;
     }
-  
+
     try {
       const success = await register(email, password);
       if (success) {
@@ -30,20 +30,18 @@ function Register() {
     } catch (err) {
       setError(err.message);
     }
-  }; 
+  };
 
   return (
     <div className="register">
       <h1>Cadastro</h1>
       <form className="register-form" onSubmit={handleRegister}>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-        <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <button className="register-button" type="submit">Cadastrar</button>
       </form>
       {error && <p className="error">{error}</p>}
-      <p>
-        Já tem uma conta? <a href="/login">Faça login</a>
-      </p>
+      <p>Já tem uma conta? <button className="link-button" onClick={() => { navigate('/login') }}>Faça login</button></p>
     </div>
   );
 }

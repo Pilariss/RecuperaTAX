@@ -53,14 +53,14 @@ function Login() {
           <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required />
           <div className="login-buttons">
             <button onClick={handleGoogleLogin}>
-              <img src={GoogleIcon} alt="Gooogle Logo" className="google-logo"/>
+              <img src={GoogleIcon} alt="Gooogle Logo" className="google-logo" />
               <span className="google-text">Google</span>
             </button>
             <button type="submit">Entrar</button>
           </div>
         </form>
         {error && <p className="error">{error}</p>}
-        <p>Não tem uma conta? <a href="/register">Cadastre-se</a></p>
+        <p>Não tem uma conta? <button className="link-button" onClick={() => { navigate('/register') }}>Cadastre-se</button></p>
       </div>
     </div>
   );

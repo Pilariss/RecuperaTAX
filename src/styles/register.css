@@ -52,3 +52,17 @@
   color: red;
   margin-top: 10px;
 }
+
+.link-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  height: auto;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
