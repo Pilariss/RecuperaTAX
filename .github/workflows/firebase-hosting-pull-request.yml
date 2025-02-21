@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Criar arquivo .env
+        run: |
+          echo "REACT_APP_FIREBASE_CONFIG='${{ secrets.REACT_APP_FIREBASE_CONFIG }}'" >> .env
       - run: npm ci && npm run build
       - name: Configurar variáveis de ambiente
         run:  echo "REACT_APP_FIREBASE_CONFIG=${{ secrets.REACT_APP_FIREBASE_CONFIG}}" >> .env
