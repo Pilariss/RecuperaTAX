@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm ci && npm run build
+      - name: Configurar variáveis de ambiente
+        run: |
+          echo "REACT_APP_FIREBASE_CONFIG=${{ secrets.REACT_APP_FIREBASE_CONFIG }}" >> $GITHUB_ENV
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
