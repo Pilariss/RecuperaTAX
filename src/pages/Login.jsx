@@ -44,7 +44,7 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
+    <div>
       <Loader isLoading={isLoading} />
       <div className="login">
         <h1>Login</h1>

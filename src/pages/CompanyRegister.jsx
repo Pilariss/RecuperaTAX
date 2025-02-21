@@ -6,26 +6,28 @@ import CNPJInput from '../components/CNPJInput';
 import Loader from "../components/Loader";
 import '../styles/companyRegister.css';
 
+const emptyForm = {
+  cnpj: '',
+  name: '',
+  fantasyName: '',
+  contact: '',
+  email: '',
+  zipCode: '',
+  district: '',
+  road: '',
+  number: '',
+  complement: '',
+  state: '',
+  city: '',
+  country: ''
+};
+
 function CompanyRegister() {
   const { isLoading, setIsLoading } = useLoading();
   const { companyId } = useParams();
   const navigate = useNavigate();
 
-  const [form, setForm] = useState({
-    cnpj: '',
-    name: '',
-    fantasyName: '',
-    contact: '',
-    email: '',
-    zipCode: '',
-    district: '',
-    road: '',
-    number: '',
-    complement: '',
-    state: '',
-    city: '',
-    country: ''
-  });
+  const [form, setForm] = useState(emptyForm);
 
   useEffect(() => {
     if (companyId) {
@@ -40,6 +42,8 @@ function CompanyRegister() {
         setIsLoading(false);
       };
       fetchCompanyData();
+    } else {
+      setForm(emptyForm);
     }
   }, [companyId, setIsLoading]);
 
